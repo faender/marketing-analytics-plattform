@@ -1,0 +1,91 @@
+date,channel,campaign_name,impressions,clicks,cost,conversions,revenue
+2026-01-05,Google Ads,Search - Brand,28952,997,2054.45,52,3700.48
+2026-01-05,Google Ads,Search - Nonbrand,11358,648,1501.23,29,2718.86
+2026-01-05,Facebook Ads,Prospecting,16952,201,131.84,9,663.07
+2026-01-05,Facebook Ads,Retargeting,57590,1384,1192.28,53,3004.65
+2026-01-05,TikTok,Video - Awareness,20851,342,140.82,6,263.36
+2026-01-05,LinkedIn Ads,B2B Lead Gen,6527,95,412.91,5,1145.07
+2026-01-05,Email,Newsletter,18885,573,51.39,18,1396.18
+2026-01-12,Google Ads,Search - Brand,12090,833,1202.44,56,7075.73
+2026-01-12,Google Ads,Search - Nonbrand,28267,1849,2615.93,92,6031.93
+2026-01-12,Facebook Ads,Prospecting,58336,849,609.86,20,1079.35
+2026-01-12,Facebook Ads,Retargeting,21619,381,342.42,20,995.18
+2026-01-12,TikTok,Video - Awareness,66566,542,263.89,16,998.43
+2026-01-12,LinkedIn Ads,B2B Lead Gen,5803,57,226.82,5,1404.92
+2026-01-12,Email,Newsletter,15485,629,52.17,29,2786.87
+2026-01-19,Google Ads,Search - Brand,9832,385,329.01,21,1709.8
+2026-01-19,Google Ads,Search - Nonbrand,14913,992,1750.09,75,5775.76
+2026-01-19,Facebook Ads,Prospecting,47717,855,1202.13,33,1844.46
+2026-01-19,Facebook Ads,Retargeting,31162,776,770.47,39,2562.54
+2026-01-19,TikTok,Video - Awareness,72350,755,753.59,10,546.76
+2026-01-19,LinkedIn Ads,B2B Lead Gen,3771,51,184.18,3,1212.43
+2026-01-19,Email,Newsletter,14771,324,34.75,26,2125.42
+2026-01-26,Google Ads,Search - Brand,39820,2076,4986.83,154,10651.28
+2026-01-26,Google Ads,Search - Nonbrand,36992,1904,2386.86,137,9442.61
+2026-01-26,Facebook Ads,Prospecting,43492,572,230.84,28,2329.06
+2026-01-26,Facebook Ads,Retargeting,47806,1207,1156.85,29,2248.02
+2026-01-26,TikTok,Video - Awareness,86540,1223,497.75,31,1766.04
+2026-01-26,LinkedIn Ads,B2B Lead Gen,11689,165,890.3,14,3269.84
+2026-01-26,Email,Newsletter,10947,508,88.77,23,1229.94
+2026-02-02,Google Ads,Search - Brand,36770,1938,1809.87,148,18541.72
+2026-02-02,Google Ads,Search - Nonbrand,32923,1689,1712.3,123,16696.99
+2026-02-02,Facebook Ads,Prospecting,25821,395,537.07,15,790.62
+2026-02-02,Facebook Ads,Retargeting,50343,1264,1464.79,61,3900.31
+2026-02-02,TikTok,Video - Awareness,68944,798,528.52,10,412.35
+2026-02-02,LinkedIn Ads,B2B Lead Gen,8539,36,187.76,3,606.47
+2026-02-02,Email,Newsletter,16597,646,54.48,49,4977.33
+2026-02-09,Google Ads,Search - Brand,10321,522,664.72,34,3506.72
+2026-02-09,Google Ads,Search - Nonbrand,31702,2137,3784.14,136,16696.66
+2026-02-09,Facebook Ads,Prospecting,41677,575,291.31,21,1373.71
+2026-02-09,Facebook Ads,Retargeting,45606,1244,571.73,57,4489.93
+2026-02-09,TikTok,Video - Awareness,27944,308,165.55,8,339.46
+2026-02-09,LinkedIn Ads,B2B Lead Gen,6116,61,217.2,4,1355.15
+2026-02-09,Email,Newsletter,19327,922,107.38,67,5562.31
+2026-02-16,Google Ads,Search - Brand,9657,542,931.7,22,1484.14
+2026-02-16,Google Ads,Search - Nonbrand,32692,2091,2263.99,134,10331.37
+2026-02-16,Facebook Ads,Prospecting,41282,1158,672.91,23,1458.78
+2026-02-16,Facebook Ads,Retargeting,44819,704,821.04,35,3045.06
+2026-02-16,TikTok,Video - Awareness,83788,613,311.22,18,1061.26
+2026-02-16,LinkedIn Ads,B2B Lead Gen,11883,55,233.99,3,1029.11
+2026-02-16,Email,Newsletter,18970,682,39.92,38,3841.06
+2026-02-23,Google Ads,Search - Brand,10245,551,1073.27,29,2018.14
+2026-02-23,Google Ads,Search - Nonbrand,37172,1962,3500.53,82,5457.81
+2026-02-23,Facebook Ads,Prospecting,58081,1259,1227.6,72,3762.4
+2026-02-23,Facebook Ads,Retargeting,35590,526,439.4,25,1450.0
+2026-02-23,TikTok,Video - Awareness,61441,1163,1110.68,12,732.7
+2026-02-23,LinkedIn Ads,B2B Lead Gen,4638,22,84.76,2,959.96
+2026-02-23,Email,Newsletter,19432,429,37.17,19,1449.53
+2026-03-02,Google Ads,Search - Brand,25800,1500,2759.78,134,15050.63
+2026-03-02,Google Ads,Search - Nonbrand,8256,468,815.64,41,2799.76
+2026-03-02,Facebook Ads,Prospecting,23800,364,501.84,18,887.88
+2026-03-02,Facebook Ads,Retargeting,33465,739,878.95,21,1639.14
+2026-03-02,TikTok,Video - Awareness,54600,687,326.86,19,618.26
+2026-03-02,LinkedIn Ads,B2B Lead Gen,9939,130,412.93,10,2392.46
+2026-03-02,Email,Newsletter,9291,231,26.86,15,1254.82
+2026-03-09,Google Ads,Search - Brand,11665,385,885.99,33,3420.36
+2026-03-09,Google Ads,Search - Nonbrand,35348,1582,2751.56,97,6144.59
+2026-03-09,Facebook Ads,Prospecting,38897,1088,1388.0,59,5542.19
+2026-03-09,Facebook Ads,Retargeting,28767,680,770.87,23,1692.64
+2026-03-09,TikTok,Video - Awareness,73264,1437,1185.0,41,1715.31
+2026-03-09,LinkedIn Ads,B2B Lead Gen,5662,83,518.18,9,1866.92
+2026-03-09,Email,Newsletter,17067,815,136.4,41,3697.97
+2026-03-16,Google Ads,Search - Brand,32086,2003,2510.9,159,10914.98
+2026-03-16,Google Ads,Search - Nonbrand,36579,1154,1846.6,58,7741.62
+2026-03-16,Facebook Ads,Prospecting,37915,611,778.95,18,745.56
+2026-03-16,Facebook Ads,Retargeting,27656,497,351.11,11,950.4
+2026-03-16,TikTok,Video - Awareness,66025,965,559.48,29,1647.51
+2026-03-16,LinkedIn Ads,B2B Lead Gen,3452,18,123.87,1,488.76
+2026-03-16,Email,Newsletter,9349,198,27.62,9,874.67
+2026-03-23,Google Ads,Search - Brand,22299,1210,2020.0,72,7641.15
+2026-03-23,Google Ads,Search - Nonbrand,16346,519,799.93,34,4233.71
+2026-03-23,Facebook Ads,Prospecting,58950,822,718.78,48,4571.82
+2026-03-23,Facebook Ads,Retargeting,55839,909,1211.53,44,2552.85
+2026-03-23,TikTok,Video - Awareness,60538,908,479.72,22,1269.85
+2026-03-23,LinkedIn Ads,B2B Lead Gen,6143,53,358.36,5,2354.21
+2026-03-23,Email,Newsletter,15084,559,62.0,40,2729.3
+2026-01-05,Google Ads,Search - Brand,28952,997,2054.45,52,3700.48
+,,,,,,,
+2026-02-02,Facebook Ads,Retargeting,18420,312,-410.00,9,880.15
+2026-02-09,TikTok,,25310,140,95.50,3,150.00
+not-a-date,Email,Newsletter,9000,210,45.00,6,300.00
+2026-02-16,LinkedIn Ads,B2B Lead Gen,,,,,
