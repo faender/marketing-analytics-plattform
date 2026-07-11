@@ -1,7 +1,10 @@
+from unittest.mock import patch
+
 import pytest
 from django.core.files.uploadedfile import SimpleUploadedFile
 
 from analytics.models import CampaignRecord
+from analytics.services.ai_agent import AIAgentError
 
 VALID_CSV = (
     b"date,channel,campaign_name,impressions,clicks,cost,conversions,revenue\n"
@@ -121,3 +124,36 @@ def test_dashboard_page_loads(api_client):
     response = api_client.get("/")
 
     assert response.status_code == 200
+
+
+@pytest.mark.django_db
+@patch("analytics.views.answer_question")
+def test_ask_endpoint_returns_agent_answer(mock_answer_question, api_client):
+    mock_answer_question.return_value = {
+        "answer": "Total revenue was $1,390.00.",
+        "tool_calls": [{"tool": "get_summary", "input": {}}],
+    }
+
+    response = api_client.post("/api/ask/", {"question": "What's total revenue?"}, format="json")
+
+    assert response.status_code == 200
+    assert response.data["answer"] == "Total revenue was $1,390.00."
+    mock_answer_question.assert_called_once_with("What's total revenue?")
+
+
+@pytest.mark.django_db
+def test_ask_endpoint_requires_question(api_client):
+    response = api_client.post("/api/ask/", {}, format="json")
+
+    assert response.status_code == 400
+
+
+@pytest.mark.django_db
+@patch("analytics.views.answer_question")
+def test_ask_endpoint_returns_502_on_agent_error(mock_answer_question, api_client):
+    mock_answer_question.side_effect = AIAgentError("ANTHROPIC_API_KEY is not configured.")
+
+    response = api_client.post("/api/ask/", {"question": "What's total revenue?"}, format="json")
+
+    assert response.status_code == 502
+    assert "not configured" in response.data["detail"]

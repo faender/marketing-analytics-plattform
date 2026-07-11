@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 
 from analytics.models import DataSource
 from analytics.serializers import (
+    AskQuestionSerializer,
     CSVUploadSerializer,
     DataSourceSerializer,
     DateChannelFilterSerializer,
@@ -12,6 +13,7 @@ from analytics.serializers import (
     TrendsQuerySerializer,
 )
 from analytics.services import metrics as metrics_service
+from analytics.services.ai_agent import AIAgentError, answer_question
 from analytics.services.ingestion import IngestionError, ingest_csv
 
 
@@ -67,6 +69,19 @@ class TopCampaignsView(APIView):
         query.is_valid(raise_exception=True)
         top_campaigns = metrics_service.get_top_campaigns(**query.validated_data)
         return Response({"top_campaigns": top_campaigns})
+
+
+class AskQuestionView(APIView):
+    """POST a natural-language question; the AI agent answers it using the metrics service."""
+
+    def post(self, request):
+        query = AskQuestionSerializer(data=request.data)
+        query.is_valid(raise_exception=True)
+        try:
+            result = answer_question(query.validated_data["question"])
+        except AIAgentError as exc:
+            return Response({"detail": str(exc)}, status=status.HTTP_502_BAD_GATEWAY)
+        return Response(result)
 
 
 def dashboard(request):

@@ -38,3 +38,7 @@ class TrendsQuerySerializer(DateChannelFilterSerializer):
 class TopCampaignsQuerySerializer(DateChannelFilterSerializer):
     metric = serializers.ChoiceField(choices=METRIC_COLUMNS, default="revenue")
     limit = serializers.IntegerField(required=False, default=5, min_value=1, max_value=50)
+
+
+class AskQuestionSerializer(serializers.Serializer):
+    question = serializers.CharField(max_length=2000, allow_blank=False, trim_whitespace=True)

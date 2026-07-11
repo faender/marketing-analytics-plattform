@@ -14,4 +14,5 @@ urlpatterns = [
         views.TopCampaignsView.as_view(),
         name="metrics-top-campaigns",
     ),
+    path("ask/", views.AskQuestionView.as_view(), name="ask"),
 ]
