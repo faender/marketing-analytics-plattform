@@ -10,7 +10,12 @@ services:
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-marketing}"]
+      # -d is required: without it, pg_isready defaults to a database named
+      # after the user ("marketing"), which doesn't exist - only
+      # POSTGRES_DB ("marketing_analytics") does. That mismatch doesn't fail
+      # the healthcheck (pg_isready only needs the server to respond), but
+      # it does spam the postgres logs with a FATAL every interval.
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-marketing} -d ${POSTGRES_DB:-marketing_analytics}"]
       interval: 5s
       timeout: 5s
       retries: 10
