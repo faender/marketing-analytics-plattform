@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-marketing}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-marketing}
+      POSTGRES_DB: ${POSTGRES_DB:-marketing_analytics}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-marketing}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    env_file:
+      - .env
+    environment:
+      # Overrides .env's localhost-pointed DATABASE_URL so the web
+      # container talks to the db service by its Compose network name.
+      DATABASE_URL: postgres://${POSTGRES_USER:-marketing}:${POSTGRES_PASSWORD:-marketing}@db:5432/${POSTGRES_DB:-marketing_analytics}
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

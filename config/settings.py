@@ -74,7 +74,10 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / "analytics" / "static"]
+# No STATICFILES_DIRS entry for analytics/static/ - it's an app's own static
+# directory (analytics/static/analytics/...), already picked up by Django's
+# default AppDirectoriesFinder. Listing it again here made collectstatic
+# discover every file twice.
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
