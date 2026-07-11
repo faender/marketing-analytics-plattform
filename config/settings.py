@@ -82,6 +82,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 50,
+    # No login system in this project - the dashboard is a public single-page
+    # demo that POSTs to the API via fetch(). Leaving DRF's default
+    # SessionAuthentication enabled would enforce CSRF on those requests for
+    # no security benefit (there's no session to protect), so it's disabled.
+    "DEFAULT_AUTHENTICATION_CLASSES": [],
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
 }
 
 ANTHROPIC_API_KEY = env("ANTHROPIC_API_KEY", default="")
